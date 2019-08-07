@@ -1,0 +1,77 @@
+@font-face {
+  font-family: buffied;
+  src: url(fonts/BUFFIED_.TTF);
+}
+.fontBuffied {
+  font-family: buffied;
+  font-size: 2em;
+}
+
+@media screen and (min-width: 1000px) {
+  .grdFntr{
+    display: block;
+    color: green;
+  }
+  .moyFntr, .minFntr{
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .moyFntr{
+    display: block;
+    color: orange;
+  }
+  .grdFntr, .minFntr{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .minFntr{
+    color: red;
+    display: block;
+  }
+  .moyFntr, .grdFntr {
+    display: none;
+  }
+}
+
+/*exercice7 annimation css*/
+.annimationCarre {
+  background-color:  blue;
+  width: 150px;
+  height: 150px;
+  border: 5px solid darkblue;
+  -webkit-animation: masuperanimation 15s; /* Safari, Opera, Chrome */
+  -webkit-animation-iteration-count: infinite; /* Safari, Opera, Chrome */
+  -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes masuperanimation { /* Safari, Opera, Chrome */
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  25% {
+    transform: translateX(150px) translateY(0px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(150px) translateY(150px) rotate(180deg);
+    border-radius: 50%;
+    background-color: darkred;
+  }
+  75% {
+    transform: translateX(0px) translateY(150px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) rotate(360deg);
+  }
+}
+.textAnnim{
+  padding-top: 40px;
+  width: 100px;
+  margin: auto;
+  text-align: center;
+  color: silver;
+  
+}
